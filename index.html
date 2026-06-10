@@ -12,8 +12,8 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="O meu Warung">
 <meta property="og:description" content="O Warung Beach Club fechou no sábado, dia 6 de junho. O meu Warung, não. Uma crônica de despedida.">
-<meta property="og:image" content="https://SEU-SITE.netlify.app/og-image.png">
-<meta property="og:url" content="https://SEU-SITE.netlify.app/">
+<meta property="og:image" content="https://meuwarung.netlify.app/og-image.png">
+<meta property="og:url" content="https://meuwarung.netlify.app/">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -151,12 +151,20 @@ h1 em{
   background:linear-gradient(100deg,var(--ambar),var(--laranja));
   -webkit-background-clip:text;background-clip:text;color:transparent;
 }
+.byline{
+  font-family:'Fraunces',Georgia,serif;
+  font-style:italic;
+  font-size:clamp(1.05rem,2.4vw,1.3rem);
+  color:rgba(234,227,216,.85);
+  margin-bottom:1rem;
+  opacity:0;animation:surgir 1.4s ease 1.8s forwards;
+}
 .contexto{
   font-family:'Archivo',sans-serif;
   font-size:.82rem;font-weight:500;
   letter-spacing:.18em;text-transform:uppercase;
   color:var(--cinza);
-  opacity:0;animation:surgir 1.4s ease 1.9s forwards;
+  opacity:0;animation:surgir 1.4s ease 2.1s forwards;
 }
 .contexto .sep{color:var(--laranja);margin:0 .6em}
 
@@ -341,12 +349,19 @@ footer{
   font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
   color:rgba(155,148,143,.6);
 }
+.aviso{
+  font-family:'Newsreader',Georgia,serif;
+  font-style:italic;
+  font-size:.92rem;
+  color:rgba(234,227,216,.6);
+  margin-top:1rem;
+}
 
 /* acessibilidade */
 :focus-visible{outline:2px solid var(--ambar);outline-offset:3px}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
-  .templo-cena,.eyebrow,h1,.contexto,.indicador{opacity:1}
+  .templo-cena,.eyebrow,h1,.byline,.contexto,.indicador{opacity:1}
   article p,.autor-foto,.autor-info{opacity:1;transform:none}
 }
 </style>
@@ -458,7 +473,8 @@ footer{
     <div class="titulo-bloco">
       <p class="eyebrow">Uma crônica de despedida</p>
       <h1>O <em>meu</em> Warung</h1>
-      <p class="contexto">Praia Brava · Itajaí <span class="sep">—</span> 2002 · 2026</p>
+      <p class="byline">por Igor Schulenburg</p>
+      <p class="contexto">Warung Beach Club · O Templo da Música Eletrônica <span class="sep">—</span> 2002 · 2026</p>
       <div class="indicador" aria-hidden="true"></div>
     </div>
   </header>
@@ -523,6 +539,7 @@ footer{
     <span></span><span></span><span></span><span></span><span></span>
   </div>
   <p class="memoria">Em memória do Templo · Praia Brava · 2002–2026</p>
+  <p class="aviso">Crônica de Igor Schulenburg. Se for reproduzir, seja honesto: cite de onde.</p>
 </footer>
 
 <script>
